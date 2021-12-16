@@ -1,0 +1,28 @@
+.footerContainer {
+    background-color: yellow;
+    height: 15vh;
+}
+
+.copyright {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.footerLinks > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.footerLinks > ul > li {
+    padding: 8px 12px 0;
+    text-decoration: none;
+}
+
+span {
+    content: '\00A9';
+}
+
+.footerLinks > ul > li >.navlink {
+    text-decoration: none;
+}

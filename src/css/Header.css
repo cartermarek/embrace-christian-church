@@ -1,0 +1,36 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    background-color: lightskyblue;
+}
+
+.headerTitle > ul {
+    display: flex;
+    align-items: center;
+}
+
+.headerTitle > ul > li {
+    list-style-type: none;
+    padding-right: 16px;
+}
+
+.navbarLogo {
+    display: flex;
+    flex: 1;
+    /* height: 100px;
+    width: 100px; */
+}
+
+.navbarImage {
+    background-image: url('../assests/Embrace\ Christian\ Church-logos_black.png');
+    height: 115px;
+    width: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerTitle > ul > li > .navlink {
+    text-decoration: none;
+}
