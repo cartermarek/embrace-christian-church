@@ -1,0 +1,136 @@
+.contactContainer {
+	margin: 20px;
+	position: relative;
+	height: 71.75vh;
+}
+
+.contactPicFrame {
+	width: 375px;
+	height: 600px;
+}
+
+.contactPic {
+	background-image: url("../assets/jesussaves1.jpeg");
+	height: 600px;
+	width: 375px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.contactCard {
+	position: absolute;
+	top: 50px;
+	left: 255px;
+	background-color: rgba(255, 255, 255, 0.95);
+	border: 1px solid black;
+}
+
+.contactCard > .wrapper {
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px 20px;
+	/* opacity: 0.75; */
+}
+
+.wrapper fieldset {
+	margin: 20px 0;
+}
+
+label > p {
+	margin: 4px 0px 4px;
+}
+
+div > h2,
+div > h3 {
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+div > h3 {
+	font-family: "Dancing Script", sans-serif;
+	text-shadow: -0.25em 0.25em rgba(51, 51, 51, 0.25);
+	margin: 8px 0px;
+}
+
+/* BUTTON */
+#contactButton {
+	margin-top: 8px;
+	padding: 4px 6px;
+	outline: none;
+	border-radius: 5px;
+	box-shadow: -2.5px 2.5px 3px 0px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: -2.5px 2.5px 3px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: -2.5px 2.5px 3px 0px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+/* STYLING INPUTS */
+
+#contactName {
+	width: 400px;
+}
+
+#contactEmail {
+	width: 400px;
+}
+
+#contactMessage {
+	width: 500px;
+	height: 120px;
+}
+
+#contactName,
+#contactEmail,
+#contactMessage {
+	background-color: rgba(128, 128, 128, 0.5);
+	border: 1px solid black;
+}
+
+label > input:focus {
+	border: 1px red solid;
+}
+
+/* FOR MOBILE PHONES */
+@media only screen and (max-width: 600px) {
+	.contactContainer {
+		margin: 0 20px;
+		margin-top: 20px;
+		height: 100%;
+		margin-bottom: 20px;
+	}
+
+	.contactPicFrame {
+		margin: 0 auto;
+		height: 300px;
+	}
+
+	.contactCard {
+		position: unset;
+		left: 0;
+		margin-bottom: 20px;
+	}
+
+	#contactName {
+		width: 375px;
+		max-width: 500px;
+	}
+
+	#contactEmail {
+		width: 375px;
+		max-width: 500px;
+	}
+
+	#contactMessage {
+		width: 375px;
+		max-width: 500px;
+	}
+}
+
+/* FOR TABLETS */
+@media only screen and (min-width: 600px) {
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+}

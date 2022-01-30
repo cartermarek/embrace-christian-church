@@ -1,36 +1,187 @@
 .headerContainer {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid black;
-    background-color: lightskyblue;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid black;
+	/* height: 13vh; */
 }
 
 .headerTitle > ul {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
 .headerTitle > ul > li {
-    list-style-type: none;
-    padding-right: 16px;
+	list-style-type: none;
+	padding-right: 16px;
+	font-size: 20px;
 }
 
 .navbarLogo {
-    display: flex;
-    flex: 1;
-    /* height: 100px;
+	display: flex;
+	flex: 1;
+	/* height: 100px;
     width: 100px; */
 }
 
 .navbarImage {
-    background-image: url('../assests/Embrace\ Christian\ Church-logos_black.png');
-    height: 115px;
-    width: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-image: url("../assets/Embrace\ Christian\ Church-logos_black.png");
+	height: 115px;
+	width: 250px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .headerTitle > ul > li > .navlink {
-    text-decoration: none;
+	text-decoration: none;
+}
+
+/* NAVIGATION LINKS */
+
+.navlink {
+	position: relative;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 800;
+	color: black;
+	overflow: hidden;
+	background: linear-gradient(to right, red, red 50%, black 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+}
+
+.navlink:hover {
+	background-position: 0 100%;
+}
+
+.navlink:active {
+	color: red;
+}
+
+.mobileNavlink {
+	position: relative;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 800;
+	color: white;
+	overflow: hidden;
+	background: linear-gradient(to right, red, red 50%, white 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+}
+
+.mobileNavlink:hover {
+	background-position: 0 100%;
+}
+
+.mobileNavlink:active {
+	color: red;
+}
+
+/* MOBILE CSS */
+#mobileLink {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	display: none;
+	width: 50px;
+	height: 50px;
+	/* display: block; */
+	border: none;
+	padding-left: 0px;
+	margin: 20px;
+	background: linear-gradient(
+		to bottom,
+		black,
+		black 20%,
+		white 20%,
+		white 40%,
+		black 40%,
+		black 60%,
+		white 60%,
+		white 80%,
+		black 80%,
+		black 100%
+	);
+}
+
+#sidebar-outer-layer {
+	background-color: white;
+	margin: 5px;
+}
+
+#mobileLink #sidebar-menu {
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	right: -250px;
+	width: 200px;
+	height: 100%;
+	background-color: black;
+	transition: 0.3s;
+	padding: 0px 10px;
+	box-sizing: border-box;
+	z-index: 10;
+}
+
+#mobileLink ul {
+	padding-left: 0px;
+}
+
+#mobileLink li {
+	list-style-type: none;
+	line-height: 3rem;
+}
+
+#mobileLink NavLink {
+	color: #b9faf8;
+	font-size: 1.3rem;
+	text-decoration: none;
+}
+
+#mobileLink NavLink:hover {
+	text-decoration: underline;
+}
+
+#mobileLink:focus #sidebar-menu,
+#mobileLink:focus-within #sidebar-menu {
+	visibility: visible;
+	right: 0;
+}
+
+/* FOR MOBILE PHONES */
+@media only screen and (max-width: 600px) {
+	/* move navbarLogo to center */
+	.headerTitle {
+		align-self: center;
+		position: relative;
+	}
+	.headerTitle > ul > li {
+		padding: 0;
+	}
+	/* hides links */
+	li > .navlink {
+		display: none;
+	}
+	/* show mobile links */
+	#mobileLink {
+		display: inline;
+	}
+}
+
+/* FOR TABLETS */
+@media only screen and (min-width: 600px) {
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 768px) {
 }

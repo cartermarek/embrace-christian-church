@@ -1,28 +1,79 @@
 .footerContainer {
-    background-color: yellow;
-    height: 15vh;
+	background-color: black;
+	margin-bottom: 12px;
+	/* height: 12vh; */
 }
 
 .copyright {
-    margin-top: 32px;
-    text-align: center;
+	margin-top: 20px;
+	padding-bottom: 12px;
+	text-align: center;
+	color: white;
+	font-size: 12px;
 }
 
 .footerLinks > ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
 }
 
 .footerLinks > ul > li {
-    padding: 8px 12px 0;
-    text-decoration: none;
+	padding: 8px 12px 0;
+	text-decoration: none;
+	font-size: 18px;
 }
 
 span {
-    content: '\00A9';
+	content: "\00A9";
 }
 
-.footerLinks > ul > li >.navlink {
-    text-decoration: none;
+.footerLinks > ul > li > .FooterNavlink {
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 800;
+	color: white;
+	overflow: hidden;
+	background: linear-gradient(to right, red, red 50%, white 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+}
+
+.footerLinks > ul > li > .FooterNavlink:hover {
+	background-position: 0 100%;
+}
+
+.footerLinks > ul > li > .FooterNavlink:active {
+	color: red;
+}
+
+/* FOR MOBILE PHONES */
+@media only screen and (max-width: 600px) {
+	.footerLinks > ul {
+		/* justify-content: space-evenly; */
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footerLinks > ul > li > .navlink {
+		font-size: medium;
+	}
+
+	.copyright {
+		font-size: small;
+	}
+}
+
+/* FOR TABLETS */
+@media only screen and (min-width: 600px) {
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 768px) {
 }

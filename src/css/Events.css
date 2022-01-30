@@ -1,0 +1,74 @@
+.eventContainer {
+	display: flex;
+}
+
+.eventCalendar {
+	flex: 1;
+	margin: 20px 20px;
+}
+
+/* .calendar {
+	width: 400px;
+	height: 400px;
+} */
+
+.eventInfo {
+	padding: 20px;
+	max-width: 300px;
+	/* border: 1px solid black; */
+	/* flex: 1; */
+}
+
+.word {
+	margin-bottom: 20px;
+}
+
+.pastEvent,
+.word {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+/* FOR MOBILE PHONES */
+@media only screen and (max-width: 600px) {
+	.eventContainer {
+		flex-direction: column;
+	}
+
+	.eventInfo {
+		margin: 0 auto;
+	}
+
+	.pastEvent {
+		margin-bottom: 20px;
+	}
+}
+
+/* FOR TABLETS */
+@media only screen and (min-width: 600px) {
+	.eventInfo {
+		flex-direction: row;
+	}
+
+	.eventInfo {
+		margin: 0 auto;
+	}
+
+	.pastEvent {
+		margin-bottom: 20px;
+	}
+}
+
+/* FOR TABLETS */
+@media only screen and (max-width: 768px) {
+	.eventContainer {
+		flex-direction: column;
+	}
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+	.word {
+		margin-top: 20px;
+	}
+}
