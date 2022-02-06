@@ -24,13 +24,13 @@ function App() {
 			<Routes>
 				{/* <Route path='/' element={}/> */}
 				<Route path="/" element={<Landing />} />
-				<Route path="/home" element={<Home />} />
+				{/* <Route path="/home" element={<Home />} /> */}
 				<Route path="/about" element={<About />} />
 				<Route path="/events" element={<Events />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/giving" element={<Giving />} />
 			</Routes>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }

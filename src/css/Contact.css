@@ -1,7 +1,12 @@
 .contactContainer {
 	margin: 20px;
 	position: relative;
-	height: 71.75vh;
+	height: 90vh;
+	max-height: 100%;
+}
+
+.innerContainer {
+	height: 100%;
 }
 
 .contactPicFrame {
@@ -15,14 +20,19 @@
 	width: 375px;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position-x: -100px;
+	background-position-y: -150px;
+	/* background-color: #000; */
 }
 
 .contactCard {
 	position: absolute;
-	top: 50px;
-	left: 255px;
+	top: 18%;
+	left: 15%;
 	background-color: rgba(255, 255, 255, 0.95);
 	border: 1px solid black;
+	width: 55%;
+	max-width: 800px;
 }
 
 .contactCard > .wrapper {
@@ -65,18 +75,19 @@ div > h3 {
 	cursor: pointer;
 }
 
-/* STYLING INPUTS */
-
-#contactName {
-	width: 400px;
+.btn--form {
+	margin-top: 10px;
 }
 
-#contactEmail {
-	width: 400px;
+/* STYLING INPUTS */
+
+#contactName,
+#contactEmail,
+#contactMessage {
+	width: 100%;
 }
 
 #contactMessage {
-	width: 500px;
 	height: 120px;
 }
 
@@ -93,6 +104,11 @@ label > input:focus {
 
 /* FOR MOBILE PHONES */
 @media only screen and (max-width: 600px) {
+	.innerContainer {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.contactContainer {
 		margin: 0 20px;
 		margin-top: 20px;
@@ -106,9 +122,10 @@ label > input:focus {
 	}
 
 	.contactCard {
-		position: unset;
-		left: 0;
+		margin-top: -150px;
 		margin-bottom: 20px;
+		width: 80%;
+		position: relative;
 	}
 
 	#contactName {
@@ -127,8 +144,21 @@ label > input:focus {
 	}
 }
 
+@media only screen and (max-width: 600px) {
+	#contactName,
+	#contactEmail,
+	#contactMessage {
+		width: 100%;
+	}
+}
+
 /* FOR TABLETS */
 @media only screen and (min-width: 600px) {
+	#contactName,
+	#contactEmail,
+	#contactMessage {
+		width: 100%;
+	}
 }
 
 /* FOR DESKTOP */

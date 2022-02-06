@@ -14,7 +14,7 @@ function Header() {
 			<div className="headerTitle">
 				<ul>
 					<li className="navbarLogo">
-						<NavLink to="/home">
+						<NavLink to="/">
 							<div className="navbarImage"></div>
 						</NavLink>
 					</li>
