@@ -7,6 +7,7 @@ import {
 	Route,
 	NavLink,
 } from "react-router-dom";
+import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Events from "./pages/Events";
@@ -22,13 +23,14 @@ function App() {
 			{/* ROUTES FOR ALL PAGES react-router-dom v6 */}
 			<Routes>
 				{/* <Route path='/' element={}/> */}
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={<Landing />} />
+				<Route path="/home" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/events" element={<Events />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/giving" element={<Giving />} />
 			</Routes>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }

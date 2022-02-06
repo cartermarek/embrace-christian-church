@@ -1,7 +1,6 @@
 .footerContainer {
 	background-color: black;
-	margin-bottom: 12px;
-	/* height: 12vh; */
+	height: 100%;
 }
 
 .copyright {

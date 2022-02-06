@@ -7,3 +7,26 @@
 	font-family: "Cormorant Garamond", sans-serif;
 	letter-spacing: 2px;
 }
+
+.btn {
+	padding: 8px 16px;
+	font-size: 18px;
+	border-radius: 25px;
+	border: 1px solid black;
+	cursor: pointer;
+	-webkit-box-shadow: -3px 5px 10px 1px #000000;
+	box-shadow: -3px 5px 10px 1px #000000;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+	transform: scale(1.2);
+}
+
+.card {
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 12px 16px;
+	-webkit-box-shadow: -3px 5px 10px 1px #000000;
+	box-shadow: -3px 5px 10px 1px #000000;
+}
