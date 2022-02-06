@@ -1,18 +1,20 @@
 import React from "react";
 import "../css/Landing.css";
 import backgroundVideo from "../assets/video/Pexels Videos 2014792.mp4";
-import church from "../assets/church-svgrepo-com.svg";
-import videoCall from "../assets/video-call-svgrepo-com.svg";
-import charity from "../assets/charity-svgrepo-com.svg";
+import church from "../assets/images/church-svgrepo-com.svg";
+import videoCall from "../assets/images/video-call-svgrepo-com.svg";
+import charity from "../assets/images/charity-svgrepo-com.svg";
+import praise from "../assets/images/praise1.jpg";
 import { Fade, Flip, Slide } from "react-reveal";
 
 function Landing() {
 	return (
 		<div className="landingContainer">
 			<div className="landingHeader">
-				<video autoPlay loop muted id="video">
+				{/* <video autoPlay loop muted id="video">
 					<source src={backgroundVideo} type="video/mp4" />
-				</video>
+				</video> */}
+				<div id="heroImg"></div>
 				<div id="overlay">OVERLAY</div>
 				<section className="landingContent">
 					<Fade top>
@@ -33,6 +35,9 @@ function Landing() {
 					</div>
 				</section>
 			</div>
+			<section className="introSection">
+				<h1>Video Section</h1>
+			</section>
 			<section className="landingSection">
 				<h2 className="benefitsTitle">Why join ECC?</h2>
 				<div className="benefitsCards">
@@ -81,7 +86,9 @@ function Landing() {
 						</div>
 					</Flip>
 				</div>
-				<button className="btn btn--home">Join Our Home</button>
+				<Fade top>
+					<button className="btn btn--home">Join Our Home</button>
+				</Fade>
 			</section>
 		</div>
 	);
