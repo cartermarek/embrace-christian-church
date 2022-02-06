@@ -4,12 +4,15 @@ import backgroundVideo from "../assets/video/Pexels Videos 2014792.mp4";
 import church from "../assets/images/church-svgrepo-com.svg";
 import videoCall from "../assets/images/video-call-svgrepo-com.svg";
 import charity from "../assets/images/charity-svgrepo-com.svg";
-import praise from "../assets/images/praise1.jpg";
-import { Fade, Flip, Slide } from "react-reveal";
+import downArrow from "../assets/images/down-arrow-svgrepo-com.svg";
+import { Fade, Flip } from "react-reveal";
+import Jump from "react-reveal/Jump";
+import { Link } from "react-scroll";
 
 function Landing() {
 	return (
 		<div className="landingContainer">
+			{/* HEADER */}
 			<div className="landingHeader">
 				{/* <video autoPlay loop muted id="video">
 					<source src={backgroundVideo} type="video/mp4" />
@@ -27,18 +30,59 @@ function Landing() {
 					</Fade>
 					<div className="landingButton">
 						<Fade left>
-							<button className="btn btn--home">Join Our Home</button>
+							<div>
+								<button className="btn btn--home">Join Our Home</button>
+							</div>
 						</Fade>
 						<Fade right>
-							<button className="btn btn-giving">Giving</button>
+							<div>
+								<button className="btn btn-giving">Giving</button>
+							</div>
 						</Fade>
 					</div>
 				</section>
+				<div className="landingJump">
+					<Jump>
+						<Link
+							to="introSection"
+							className="downArrow"
+							spy={true}
+							smooth={true}
+						>
+							<img className="downArrowImg" src={downArrow} alt="down arrow" />
+						</Link>
+						<p className="arrowClick">See what's below</p>
+					</Jump>
+				</div>
 			</div>
-			<section className="introSection">
-				<h1>Video Section</h1>
+
+			{/* INTRO SECTION */}
+
+			<section id="introSection">
+				<h1>Join Your New Home</h1>
+				<div className="liveVideo">VIDEO GOES HERE</div>
+				<div className="introJump">
+					<Jump>
+						<Link
+							to="landingSection"
+							className="downArrowIntro"
+							spy={true}
+							smooth={true}
+						>
+							<img
+								className="downArrowImgIntro"
+								src={downArrow}
+								alt="down arrow"
+							/>
+						</Link>
+						<p className="arrowClickIntro">Why Join ECC?</p>
+					</Jump>
+				</div>
 			</section>
-			<section className="landingSection">
+
+			{/* LANDING SECTION */}
+
+			<section id="landingSection">
 				<h2 className="benefitsTitle">Why join ECC?</h2>
 				<div className="benefitsCards">
 					<Flip top>
@@ -87,7 +131,11 @@ function Landing() {
 					</Flip>
 				</div>
 				<Fade top>
-					<button className="btn btn--home">Join Our Home</button>
+					<div className="otherButton">
+						<button className="btn btn--home btn--card-bottom">
+							Join Our Home
+						</button>
+					</div>
 				</Fade>
 			</section>
 		</div>
